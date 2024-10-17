@@ -3,10 +3,24 @@
     box-sizing: border-box;
 }
 
+:root {
+    --main-color: #3498DB;
+    --border-color: #BDBDBD;
+}
+
 body {
     font-family: "Lexend", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+.navigation-list {
+    list-style-type: none;
+}
+
+.navigation-list a {
+    color: black;
+    text-decoration: none;
 }
 
 .container {
@@ -14,9 +28,57 @@ body {
     margin: 0 auto;
 }
 
-.banner {
-    background-color: rgb(0, 132, 255);
-    height: 380px;
+.btn {
+    cursor: pointer;
+    color: white;
+    background-color: #222;
+    padding: 0.6em 2em;
+    width: 100%;
+    user-select: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #333;
+}
+
+.styled-container {
+    border: 1px solid var(--border-color);
+    background-color: white;
+}
+
+.round-container {
+    border-radius: 0.3em;
+}
+
+.circle-container, .circle-button {
+    border-radius: 1em;
+}
+
+.circle-button {
+    border: 1px solid var(--border-color);
+    background-color: white;
+    padding: 0.3em 0.6em;
+    user-select: none;
+}
+
+.circle-button:hover {
+    background-color: #f5f5f5;
+}
+
+.topbar-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+
+.topbar-navigation {
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 #topbar {
@@ -25,9 +87,8 @@ body {
 }
 
 #logo {
-    width: 300px;
-    height: 60px;
-    background-color: gray;
+    width: 260px;
+    height: 100%;
 }
 
 .topbar-container {
@@ -47,25 +108,26 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: 12px;
     width: 100%;
 }
 
 .search-bar {
     display: flex;
     justify-content: flex-end;
-    width: auto;
+    width: 400px;
     height: 30px;
 }
 
 .search-bar > input {
     color: #546E7A;
-    border: 1px solid #BDBDBD;
-    border-radius: 1em;
-    background-color: #F5F5F5;
-    width: 400px;
+    border-right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: white;
+    width: 100%;
     height: 100%;
     padding: 0 1em;
+    font-size: 14px;
 }
 
 .search-bar > input:focus {
@@ -78,16 +140,13 @@ body {
 
 .search-button {
     cursor: pointer;
-    border: 1px solid #BDBDBD;
-    border-top-right-radius: 1em;
-    border-bottom-right-radius: 1em;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     padding: 4px 14px;
     background-color: white;
-    position: relative;
-    right: 10%;
     height: 100%;
 }
 
 .search-button > i {
-    color: #00CE6A;
+    color: var(--main-color);
 }
